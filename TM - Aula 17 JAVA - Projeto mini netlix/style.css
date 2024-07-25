@@ -1,0 +1,147 @@
+/* Reset básico para garantir que o estilo seja consistente em diferentes navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f0f0f0, #d9d9d9);
+    color: #333;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo do título principal */
+h1 {
+    color: #fff;
+    background: linear-gradient(135deg, #ff6b6b, #ff9f43);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+/* Estilo dos subtítulos */
+h2 {
+    color: #333;
+    margin: 7px 0;
+    font-size: 1.8rem;
+}
+
+/* Estilo do formulário */
+#formulario {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#buscar {
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid #ff6b6b;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#buscar:focus {
+    border-color: #ff9f43;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff6b6b;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff9f43;
+    transform: scale(1.05);
+}
+
+/* Estilo para o container de filmes */
+#filmes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilo para cada filme */
+#filmes div {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#filmes div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#filmes img {
+    max-width: 150px;
+    display: block;
+    border-bottom: 2px solid #ff6b6b;
+}
+
+#filmes h2 {
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Estilo para o resultado */
+#resultado {
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #formulario {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #buscar {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    
+    button {
+        width: 100%;
+    }
+    
+    #filmes {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+img{
+    max-width: 200px;
+}
